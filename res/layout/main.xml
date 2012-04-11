@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentTop="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" ads:adUnitId="a14e1dbf8fc854d"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+			<TableRow android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/tablerworwo" android:layout_alignParentTop="true"
+		android:visibility="visible" android:layout_gravity="center|bottom">
+		
+</TableRow>	
+	<TableRow android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/tableButtonsRow" android:layout_alignParentTop="true"
+		android:visibility="visible" android:layout_gravity="center|bottom">
+				<Button android:text="Canvas" android:id="@+id/loadButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<Button android:text="Stamp" android:id="@+id/loadstampButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		
+		<Button android:text="Save" android:id="@+id/saveButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<Button android:text="Undo" android:id="@+id/undoButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+		<Button android:text="Clear" android:id="@+id/clearButton"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			
+	</TableRow>		
+
+	
+	<TextView android:text="Select Stamp Size:" android:id="@+id/freqtext"
+		android:layout_width="fill_parent" android:layout_below="@+id/adView"
+		android:layout_height="wrap_content"></TextView>
+
+	<SeekBar android:id="@+id/stampSize" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:max="99" 
+		android:progress="50" android:layout_below="@+id/freqtext" />
+
+	<com.hunterdavis.easyimagestamp.Panel
+		android:id="@+id/SurfaceView01" android:layout_width="fill_parent"
+
+		android:layout_height="fill_parent" >
+	</com.hunterdavis.easyimagestamp.Panel>
+
+</LinearLayout>
